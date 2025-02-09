@@ -1,75 +1,64 @@
-# Nuxt Minimal Starter
+# Papaya
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Papaya is a starter template for building web applications with Nuxt.
 
-## Setup
+## Installation
 
-Make sure to install dependencies:
+1. **Clone the repository:**
 
-```bash
-# npm
-npm install
+   ```bash
+   git clone https://github.com/TropiStack/papaya.git
+   cd papaya
+   ```
 
-# pnpm
-pnpm install
+2. **Install dependencies:**
 
-# yarn
-yarn install
+   Ensure you have Bun installed, then run:
 
-# bun
-bun install
-```
+   ```bash
+   bun install
+   ```
 
-## Development Server
+3. **Build the project:**
 
-Start the development server on `http://localhost:3000`:
+   ```bash
+   bun run build
+   ```
 
-```bash
-# npm
-npm run dev
+## Usage
 
-# pnpm
-pnpm dev
+### Running Locally
 
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
+To start the development server locally, run:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+bun dev
 ```
 
-Locally preview production build:
+The server will start on `http://localhost:3000` by default.
+
+### Using Docker
+
+#### Development
+
+To run the server with live reloading using Docker, use the following command:
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+docker-compose -p papaya-dev -f docker/docker-compose.yml -f docker/docker-compose.dev.yml up
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+#### Production
+
+To run the server in a production environment, use:
+
+```bash
+docker-compose -p papaya-prod -f docker/docker-compose.yml -f docker/docker-compose.prod.yml up
+```
+
+## Contributing
+
+Currently, we are not accepting outside contributions. We appreciate your interest and encourage you to check back in the future for any updates regarding contribution opportunities.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
